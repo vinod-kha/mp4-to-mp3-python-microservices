@@ -5,14 +5,14 @@ metadata:
   labels:
     app: converter
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: converter
   strategy:
     type: RollingUpdate
     rollingUpdate:
-      maxSurge: 8
+      maxSurge: 4
   template:
     metadata:
       labels:
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: converter
-          image: nasi101/converter
+          image: vinodkhathi/converter-img
           envFrom:
             - configMapRef:
                 name: converter-configmap
