@@ -3,5 +3,5 @@ kind: ConfigMap
 metadata:
   name: notification-configmap
 data:
-  MP3_QUEUE: "mp3"
-  VIDEO_QUEUE: "video"
+  MP3_QUEUE: "Audio"
+  VIDEO_QUEUE: "Video"
