@@ -1,0 +1,24 @@
+Error:
+
+1.INSTALLATION FAILED: Kubernetes cluster unreachable: the server has asked for the client to provide credentials
+
+Answer: aws configure
+
+*****************************************************
+
+2. mongosh: OpenSSL configuration error:
+40182F1D827F0000:error:030000A9:digital envelope routines:alg_module_init:unknown option:../deps/openssl/openssl/crypto/evp/evp_cnf.c:61:name=rh-allow-sha1-signatures, value=yes
+
+Answer:
+https://www.mongodb.com/community/forums/t/openssl-error-when-starting-mongosh/243323/4
+aws ec2 Linux 2023
+mongo 7.0.1
+
+I solved it as follows.
+
+sudo yum remove mongodb-mongosh
+sudo yum install mongodb-mongosh-shared-openssl3
+sudo yum install mongodb-mongosh
+
+
+
