@@ -46,6 +46,7 @@ Follow these steps to deploy your microservice application:
    - **converter-module:** Deploy the `converter-module`. Make sure to provide your email and password in `converter/manifest/secret.yaml`.
    - **notification-server:** Configure email for notifications and two-factor authentication (2FA).
 
+
 5. **Application Validation:** Verify the status of all components by running:
    ```bash
    kubectl get all
